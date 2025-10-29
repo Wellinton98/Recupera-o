@@ -1,11 +1,15 @@
 package com.recuperacao.demo.controller;
 
+import com.recuperacao.demo.model.Produto;
 import com.recuperacao.demo.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 public class ProdutoController {
@@ -34,10 +38,13 @@ public class ProdutoController {
         return "index";
     }
 
-    @GetMapping("/novo")
-    public String novoProduto() {
-        return "produto/novo";
-    }
+  @PostMapping("/adicionar-produto")
+public String adicionarProduto(@ModelAttribute Produto produto) {
+    produtoRepository.save(produto);
+    return "redirect:/"; 
+}
+
+
 
     @GetMapping("/nome")
     public String buscarPorNome(

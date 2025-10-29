@@ -1,0 +1,91 @@
+/* ================================
+   ESTILO GERAL DA APLICAÇÃO
+================================ */
+body {
+    background-color: #f7f9fb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    padding-bottom: 50px;
+}
+
+/* ================================
+   TÍTULOS
+================================ */
+h1, h2, h3 {
+    color: #004085;
+    font-weight: 600;
+}
+
+/* ================================
+   CONTAINERS E CARTÕES
+================================ */
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ================================
+   FORMULÁRIOS
+================================ */
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 3px rgba(0, 123, 255, 0.4);
+    outline: none;
+}
+
+button,
+.btn {
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+button:hover,
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* ================================
+   TABELA DE PRODUTOS
+================================ */
+.table {
+    margin-top: 20px;
+}
+
+.table thead {
+    background-color: #004085;
+    color: white;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #f2f6fc;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #d9e8ff;
+}
+
+/* ================================
+   MENSAGEM DE LISTA VAZIA
+================================ */
+.text-muted {
+    font-style: italic;
+    color: #666 !important;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+</head>
+<body>
+    <div>
+        <h1>Lista de Produtos</h1>
+        <a href="/cadastro">Cadastrar Novo Produto</a>
+        <ul>
+            <li th:each="produto : ${produtos}">
+                <strong th:text="${produto.nome}">Nome do Produto</strong> - 
+                <span th:text="${produto.descricao}">Descrição</span> - 
+                <span th:text="${produto.categoria}">Categoria</span> - 
+                <span th:text="${produto.preco}">Preço</span>
+            </li>
+        </ul>
+        <p>Total de Produtos: <span th:text="${totalProdutos}">0</span></p>
+                
+    </div>
+    
+</body>
+</html>
